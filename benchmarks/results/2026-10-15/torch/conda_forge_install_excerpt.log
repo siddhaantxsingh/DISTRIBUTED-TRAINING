@@ -1,0 +1,6 @@
+   - pytorch[version="=2.14.1",build="cpu_generic*"]
+  + libtorch               2.14.1  cpu_generic_hbc98363_0        conda-forge      62MB
+  + pytorch                2.14.1  cpu_generic_py312_h29917d7_0  conda-forge      29MB
+  Total download: 202MB
+Linking libtorch-2.14.1-cpu_generic_hbc98363_0
+Linking pytorch-2.14.1-cpu_generic_py312_h29917d7_0

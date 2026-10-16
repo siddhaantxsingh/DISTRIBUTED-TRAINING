@@ -1,0 +1,148 @@
+{
+ "world": 2,
+ "torch": "2.14.1",
+ "check": {
+  "float32": {
+   "max_abs_diff_dtrain_vs_gloo": 0.0,
+   "bit_identical_frac": 1.0,
+   "max_abs_err_dtrain": 2.384185791015625e-07,
+   "max_abs_err_gloo": 2.384185791015625e-07,
+   "max_abs_value": 6.284175634384155
+  },
+  "float64": {
+   "max_abs_diff_dtrain_vs_gloo": 0.0,
+   "bit_identical_frac": 1.0,
+   "max_abs_err_dtrain": 0.0,
+   "max_abs_err_gloo": 0.0,
+   "max_abs_value": 6.2841756914979765
+  }
+ },
+ "speed": [
+  {
+   "impl": "dtrain-ring",
+   "bytes": 1024,
+   "seconds": 0.0002526735000856206,
+   "latency_us": 252.67350008562062,
+   "bus_GBps": 0.004052660843551099
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 4096,
+   "seconds": 0.00030653000010261167,
+   "latency_us": 306.53000010261167,
+   "bus_GBps": 0.013362476751472462
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 16384,
+   "seconds": 0.0003029029999197519,
+   "latency_us": 302.9029999197519,
+   "bus_GBps": 0.054089923191056585
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 65536,
+   "seconds": 0.00035935050004809455,
+   "latency_us": 359.35050004809455,
+   "bus_GBps": 0.18237347656738706
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 262144,
+   "seconds": 0.0006407495000075869,
+   "latency_us": 640.7495000075869,
+   "bus_GBps": 0.40912088108831307
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 1048576,
+   "seconds": 0.0012142040000071574,
+   "latency_us": 1214.2040000071574,
+   "bus_GBps": 0.8635912910794388
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 4194304,
+   "seconds": 0.00958889999992607,
+   "latency_us": 9588.89999992607,
+   "bus_GBps": 0.4374124247861942
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 16777216,
+   "seconds": 0.03507151500002692,
+   "latency_us": 35071.51500002692,
+   "bus_GBps": 0.47837157875806396
+  },
+  {
+   "impl": "dtrain-ring",
+   "bytes": 67108864,
+   "seconds": 0.18406167200009804,
+   "latency_us": 184061.67200009804,
+   "bus_GBps": 0.3645998825869856
+  },
+  {
+   "impl": "gloo",
+   "bytes": 1024,
+   "seconds": 0.0005340144999763652,
+   "latency_us": 534.0144999763652,
+   "bus_GBps": 0.0019175509280091102
+  },
+  {
+   "impl": "gloo",
+   "bytes": 4096,
+   "seconds": 0.0006888159999789423,
+   "latency_us": 688.8159999789423,
+   "bus_GBps": 0.005946435623047691
+  },
+  {
+   "impl": "gloo",
+   "bytes": 16384,
+   "seconds": 0.0005686465000280805,
+   "latency_us": 568.6465000280805,
+   "bus_GBps": 0.02881227616663593
+  },
+  {
+   "impl": "gloo",
+   "bytes": 65536,
+   "seconds": 0.000545857000020078,
+   "latency_us": 545.857000020078,
+   "bus_GBps": 0.1200607485066408
+  },
+  {
+   "impl": "gloo",
+   "bytes": 262144,
+   "seconds": 0.0008720404999849052,
+   "latency_us": 872.0404999849052,
+   "bus_GBps": 0.3006098914035961
+  },
+  {
+   "impl": "gloo",
+   "bytes": 1048576,
+   "seconds": 0.0018875805000106993,
+   "latency_us": 1887.5805000106993,
+   "bus_GBps": 0.5555132615504644
+  },
+  {
+   "impl": "gloo",
+   "bytes": 4194304,
+   "seconds": 0.007468000000017128,
+   "latency_us": 7468.000000017128,
+   "bus_GBps": 0.5616368505611115
+  },
+  {
+   "impl": "gloo",
+   "bytes": 16777216,
+   "seconds": 0.029667161000134,
+   "latency_us": 29667.161000134,
+   "bus_GBps": 0.5655147117017438
+  },
+  {
+   "impl": "gloo",
+   "bytes": 67108864,
+   "seconds": 0.1867687639999076,
+   "latency_us": 186768.7639999076,
+   "bus_GBps": 0.3593152439560675
+  }
+ ]
+}

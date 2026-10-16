@@ -1,0 +1,24 @@
+How PyTorch was obtained on this machine (2026-10-15). download.pytorch.org is blocked here.
+
+(a) PyPI wheel, no deps
+  pip download torch==2.14.1 --no-deps  -> torch-2.14.1-cp313-cp313-manylinux_2_28_x86_64.whl, 554,618,164 bytes
+  sha256 c8f71aabc67bcbfc9373dc131537a5968d04edce73e88add21354a7cd0a76985
+  requires_dist (PyPI JSON) includes on Linux: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,
+  cusparse,nvjitlink,nvrtc,nvtx]==13.0.3, cuda-bindings, nvidia-cudnn-cu13, nvidia-cusparselt-cu13,
+  nvidia-nccl-cu13, nvidia-nvshmem-cu13, triton.
+  Installed with --no-deps (+ filelock, typing-extensions, sympy, networkx, jinja2, fsspec): 1.4 GB venv.
+  `import torch` FAILS: ValueError: libcublasLt.so.*[0-9] not found (see pypi_nodeps_import.log).
+  ldd torch/lib/libtorch_cuda.so: libcudart.so.13, libcublas.so.13, libcublasLt.so.13, libcudnn.so.9, libnccl.so.2,
+  libcufft, libcurand, libcusparse, libcusparseLt, libcufile, libnvrtc, libnvshmem_host, libcupti => not found.
+  Result: unusable without ~3 GB of CUDA wheels. Removed.
+
+(b) Docker Hub CPU image
+  docker manifest inspect bitnami/pytorch:latest      -> amd64 layers 3020 MB compressed
+  docker manifest inspect bitnamilegacy/pytorch:latest -> amd64 layers 3015 MB compressed
+  Not pulled: larger than the free disk (~4.8 GB, shared).
+
+(c) USED: conda-forge CPU build (conda.anaconda.org is reachable; api.anaconda.org is not)
+  micromamba 2.3.2 binary copied out of Docker Hub image mambaorg/micromamba:2.3.2 (image then removed).
+  micromamba create -p <scratch>/tenv -c conda-forge --override-channels python=3.12 "pytorch=2.14.1=cpu_generic*" numpy pytest
+  -> pytorch 2.14.1 cpu_generic_py312, libtorch 2.14.1 cpu_generic, OpenBLAS; 202 MB download, 1.1 GB env.
+  torch 2.14.1, cuda False, gloo True, nccl False (see conda_forge_install_excerpt.log, env.txt).

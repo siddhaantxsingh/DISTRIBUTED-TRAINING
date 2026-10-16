@@ -1,0 +1,74 @@
+[
+ {
+  "impl": "openmpi",
+  "bytes": 1024,
+  "seconds": 7.821999815860181e-06,
+  "world": 4,
+  "bus_GBps": 0.19636921965729898,
+  "latency_us": 7.821999815860181
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 4096,
+  "seconds": 1.7603500054974575e-05,
+  "world": 4,
+  "bus_GBps": 0.34902150031599916,
+  "latency_us": 17.603500054974575
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 16384,
+  "seconds": 4.5829999862689874e-05,
+  "world": 4,
+  "bus_GBps": 0.5362426374346835,
+  "latency_us": 45.829999862689874
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 65536,
+  "seconds": 8.03294999514037e-05,
+  "world": 4,
+  "bus_GBps": 1.2237596407231488,
+  "latency_us": 80.3294999514037
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 262144,
+  "seconds": 0.0002503315001831652,
+  "world": 4,
+  "bus_GBps": 1.5707811430534613,
+  "latency_us": 250.3315001831652
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 1048576,
+  "seconds": 0.0008972385001015937,
+  "world": 4,
+  "bus_GBps": 1.753005471590782,
+  "latency_us": 897.2385001015937
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 4194304,
+  "seconds": 0.005455751000226883,
+  "world": 4,
+  "bus_GBps": 1.1531787282334482,
+  "latency_us": 5455.751000226883
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 16777216,
+  "seconds": 0.024997163000080036,
+  "world": 4,
+  "bus_GBps": 1.0067472056696762,
+  "latency_us": 24997.163000080036
+ },
+ {
+  "impl": "openmpi",
+  "bytes": 67108864,
+  "seconds": 0.09379718599984699,
+  "world": 4,
+  "bus_GBps": 1.0732016630026002,
+  "latency_us": 93797.18599984699
+ }
+]

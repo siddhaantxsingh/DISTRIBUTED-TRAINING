@@ -1,0 +1,5 @@
+ 06:21:52 up 2 min,  0 user,  load average: 1.10, 0.37, 0.14
+W=4 float64 ddp 6 steps ckpt@3 torch bucket_cap_mb=25: torch resumed==full False maxabs 4.93e-16 | dtrain resumed==full True
+W=4 float64 ddp 6 steps ckpt@3 torch bucket_cap_mb=0.000001: torch resumed==full False maxabs 9.88e-16 | dtrain resumed==full True
+W=4 float64 ddp, two identical uninterrupted 6-step runs: torch equal True maxabs 0.00e+00 | dtrain equal True
+W=2 float64 ddp, two identical uninterrupted 6-step runs: torch equal True maxabs 0.00e+00 | dtrain equal True

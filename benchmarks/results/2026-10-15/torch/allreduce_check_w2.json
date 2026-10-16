@@ -1,0 +1,21 @@
+{
+ "world": 2,
+ "torch": "2.14.1",
+ "check": {
+  "float32": {
+   "max_abs_diff_dtrain_vs_gloo": 0.0,
+   "bit_identical_frac": 1.0,
+   "max_abs_err_dtrain": 2.384185791015625e-07,
+   "max_abs_err_gloo": 2.384185791015625e-07,
+   "max_abs_value": 6.5430686473846436
+  },
+  "float64": {
+   "max_abs_diff_dtrain_vs_gloo": 0.0,
+   "bit_identical_frac": 1.0,
+   "max_abs_err_dtrain": 0.0,
+   "max_abs_err_gloo": 0.0,
+   "max_abs_value": 6.543068492941513
+  }
+ },
+ "speed": []
+}

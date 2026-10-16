@@ -1,0 +1,21 @@
+{
+ "world": 3,
+ "torch": "2.14.1",
+ "check": {
+  "float32": {
+   "max_abs_diff_dtrain_vs_gloo": 4.76837158203125e-07,
+   "bit_identical_frac": 0.680475,
+   "max_abs_err_dtrain": 4.76837158203125e-07,
+   "max_abs_err_gloo": 4.76837158203125e-07,
+   "max_abs_value": 7.562964200973511
+  },
+  "float64": {
+   "max_abs_diff_dtrain_vs_gloo": 1.7763568394002505e-15,
+   "bit_identical_frac": 0.680995,
+   "max_abs_err_dtrain": 8.881784197001252e-16,
+   "max_abs_err_gloo": 8.881784197001252e-16,
+   "max_abs_value": 7.562964292541749
+  }
+ },
+ "speed": []
+}

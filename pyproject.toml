@@ -1,0 +1,23 @@
+[project]
+name = "dtrain"
+version = "0.1.0"
+description = "Distributed data-parallel training from scratch: autograd, collectives over TCP, DDP, ZeRO, elastic launcher"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+bench = ["mpi4py>=3.1"]
+torch = ["torch>=2.4"]  # optional: cross-check against torch.distributed (CPU wheel is enough)
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["dtrain*"]
